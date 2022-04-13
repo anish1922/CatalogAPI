@@ -1,14 +1,6 @@
 pipeline {
     agent any
-   // PULL IN ENVIRONMENT VARIABLES
-    // Jenkins makes these variables available for each job it runs
-    def buildNumber = env.BUILD_NUMBER
-    def workspace = env.WORKSPACE
-    def buildUrl = env.BUILD_URL
-
-    // PRINT ENVIRONMENT TO JOB
-    echo "workspace directory is ${workspace}"
-    echo "build URL is ${env.BUILD_URL}"
+   
     
     stages {
         stage('Checkout') {
