@@ -14,7 +14,7 @@ pipeline {
         }
         stage('CodeAnalysis') {
             steps {
-                dotnet tool install --global dotnet-sonarscanner --version 5.5.3
+                dotnet build
             }
         }
         stage('Test') {
