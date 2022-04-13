@@ -14,7 +14,7 @@ pipeline {
         }
         stage('CodeAnalysis') {
             steps {
-                 echo $workspace
+                 echo ${WORKSPACE}
             }
         }
         stage('Test') {
