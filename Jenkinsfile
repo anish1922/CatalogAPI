@@ -12,6 +12,11 @@ pipeline {
                 echo 'Building..'
             }
         }
+        stage('CodeAnalysis') {
+            steps {
+                dotnet tool install --global dotnet-sonarscanner --version 5.5.3
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
