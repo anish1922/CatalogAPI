@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'dotnet build CatalogAPI.sln --configuration Release --no-restore'
             }
         }
         stage('CodeAnalysis') {
