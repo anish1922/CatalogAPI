@@ -14,7 +14,7 @@ pipeline {
         }
         stage('CodeAnalysis') {
             steps {
-                dotnet build
+                 echo $workspace
             }
         }
         stage('Test') {
