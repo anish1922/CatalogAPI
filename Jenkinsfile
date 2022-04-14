@@ -19,7 +19,7 @@ pipeline {
         }
         stage('CodeAnalysis') {
             steps {
-                  withSonarQubeEnv('http://localhost:9000')
+                  withSonarQubeEnv('sonar')
                 {
                   sh "dotnet sonarscanner begin /k:test /d:sonar.login=99ad1d398b193d508ce474a286a596d2d528dd42"
                   sh "dotnet build "
