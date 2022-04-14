@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-               dotnetClean
+               sh "dotnet build ${WORKSPACE} \CatalogAPI"
             }
         }
         stage('CodeAnalysis') {
