@@ -19,12 +19,11 @@ pipeline {
         }
         stage('CodeAnalysis') {
             steps {
-                  withSonarQubeEnv('sonar')
-                {
-                  sh "dotnet sonarscanner begin /k:test"
+                 
+                  sh "dotnet sonarscanner begin /k:test /d:sonar.host.url=http://localhost:9000"
                   sh "dotnet build "
                   sh "dotnet sonarscanner end "
-                }
+                
             }
         }
         stage('Test') {
