@@ -8,6 +8,7 @@
     <Content Remove="Migrations\**" />
     <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Migrations\**" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.Invariant" Value="true" />
   </ItemGroup>
 
   <ItemGroup>
