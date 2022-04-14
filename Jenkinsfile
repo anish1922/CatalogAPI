@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-               
+               echo "helo"
             }
         }
         stage('CodeAnalysis') {
