@@ -21,6 +21,7 @@ pipeline {
             steps {
                   withSonarQubeEnv('sonar')
                 {
+                  sh "dotnet tool install --global dotnet-sonarscanner --version 5.5.3"
                   sh "dotnet sonarscanner begin /k:test"
                   sh "dotnet build "
                   sh "dotnet sonarscanner end "
