@@ -19,10 +19,12 @@ pipeline {
         }
         stage('CodeAnalysis') {
             steps {
-                  
-                  sh "dotnet sonarscanner begin /k:'"test"' /d:sonar.login='"99ad1d398b193d508ce474a286a596d2d528dd42"'"
+                  withSonarQubeEnv('http://localhost:9000')
+                {
+                  sh "dotnet sonarscanner begin /k:test /d:sonar.login=99ad1d398b193d508ce474a286a596d2d528dd42"
                   sh "dotnet build "
-                  sh "dotnet sonarscanner end /d:sonar.login='"99ad1d398b193d508ce474a286a596d2d528dd42"'"
+                  sh "dotnet sonarscanner end /d:sonar.login=99ad1d398b193d508ce474a286a596d2d528dd42"
+                }
             }
         }
         stage('Test') {
