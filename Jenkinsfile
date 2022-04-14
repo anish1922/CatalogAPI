@@ -3,7 +3,7 @@ pipeline {
    
     environment {
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT='true'
-        PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet:$PATH:$HOME/.dotnet/tools:$PATH"
+        PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet:$PATH:$HOME/.dotnet/tools:$PATH:/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonar-scanner:$PATH"
         DOTNET_ROOT="/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet"
   }
     
