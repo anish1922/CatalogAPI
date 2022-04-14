@@ -2,8 +2,8 @@ pipeline {
     agent any
    
     environment {
-        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1,
-    PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet::$PATH"
+        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT='true'
+        PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet::$PATH"
   }
     
     stages {
