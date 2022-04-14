@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-               sh "dotnet build ${WORKSPACE}"
+               
             }
         }
         stage('CodeAnalysis') {
