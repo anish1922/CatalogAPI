@@ -3,8 +3,8 @@ pipeline {
    
     environment {
         DOTNET_SYSTEM_GLOBALIZATION_INVARIANT='true'
-        PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet:$PATH"
-        PATH = "$PATH:$HOME/.dotnet/tools"
+        PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet:$PATH:$HOME/.dotnet/tools:$PATH"
+       
   }
     
     stages {
