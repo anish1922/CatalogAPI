@@ -1,6 +1,9 @@
 pipeline {
     agent any
    
+    environment {
+    PATH = "/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet"
+  }
     
     stages {
         stage('Checkout') {
