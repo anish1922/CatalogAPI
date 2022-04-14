@@ -21,7 +21,7 @@ pipeline {
         stage('CodeAnalysis') {
             steps {
                  
-                  sh "dotnet sonarscanner begin /k:test /d:sonar.login=dff6f3b45443e9cfbde94757ee24c3cd6961c1f8"
+                  sh "dotnet sonarscanner begin /k:test /d:sonar.login=409fc1168ac12d8770913acbb81142e09129e241 /d:sonar.host.url=172.19.0.3:9000"
                   sh "dotnet build "
                   sh "dotnet sonarscanner end "
                 
